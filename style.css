@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/jost-400-book-webfont.woff2') format('woff2'),
+         url('fonts/jost-400-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/jost-400-bookitalic-webfont.woff2') format('woff2'),
+         url('fonts/jost-400-bookitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/jost-700-bold-webfont.woff2') format('woff2'),
+         url('fonts/jost-700-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('fonts/jost-700-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/jost-700-bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('fonts/bodoni-11-bold-webfont.woff2') format('woff2'),
+         url('fonts/bodoni-11-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('fonts/bodoni-11-bold-italic-webfont.woff2') format('woff2'),
+         url('fonts/bodoni-11-bold-italic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('fonts/bodoni-11-book-webfont.woff2') format('woff2'),
+         url('fonts/bodoni-11-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Bodoni';
+    src: url('fonts/bodoni-11-book-italic-webfont.woff2') format('woff2'),
+         url('fonts/bodoni-11-book-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+body {
+    font-family: "Jost";
+    font-weight: normal;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: "Jost";
+    font-weight: bold;
+    font-size: 72px;
+}
+h2 {
+    font-family: "Bodoni";
+    font-weight: normal;
+    font-size: 24pt;
+    font-style: italic;
+}
+
+p {
+    font-family: "Bodoni";
+    font-weight: "normal";
+}
+
+#lit-amount-input {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Jost";
+    font-weight: bold;
+    font-size: 84px;
+}
+
+.btn {
+    font-family: "Jost";
+    font-weight: bold;
+    font-size: 14pt;
+}
