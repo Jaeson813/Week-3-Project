@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <a href="javascript.html"></a>
+        <script src="javascript.js"></script>
         <title>Number to Literal Amount Converter</title>
     </head>
     <body>
@@ -26,12 +26,12 @@
             </div>
             <div class="row">
                 <div class="col text-center">
-                    <input id="lit-amount-input"; type="number"; min="0"; placeholder="Number Here">
+                    <input id="lit-amount-input"; type="number"; min="0"; max="999999999" placeholder="Number Here">
                 </div>
             </div>
             <div class="row">
                 <div class="col text-center mt-3">
-                    <button type="button" class="btn btn-outline-primary"; class="lit-amount-submit">CONVERT</button>
+                    <button id = "calc" type="button" class="btn btn-outline-primary"; class="lit-amount-submit">CONVERT</button>
                 </div>
             </div>
             <div class="row mt-5 mb-3">

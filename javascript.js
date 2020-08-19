@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
 
-    </head>
-    <body>
-        <script>
-        document.addEventListener("load", function(){
+        window.addEventListener("load", function(){
             var button = document.getElementById("calc");
-            button.addEventListener("click", numberToWords,false);
+            button.addEventListener("click", function(){
+                var x = document.getElementById("lit-amount-input").value;
+                document.getElementById("lit-amount-output").textContent=numberToWords(x);
+            },false);
         },false);
         
         // Arrays for the function to pull from
         var digitsTeen = ["zero", "one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
         var tens = ["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
         var ex = ["hundred","thousand"];
-        var x=56647;
         // Function that converts numbers into words
-        function numberToWords(){
+        function numberToWords(x){
             if (x<20){
                 return digitsTeen[x];
             }
@@ -32,7 +28,7 @@
             }
             else if(x<1000){
                 var hundredsPlace = Math.floor(x/100);
-                var remainder = x-hundredsPlace;
+                var remainder = x-hundredsPlace*100;
                 if (x % 100 == 0){
                     return digitsTeen[hundredsPlace]+ex[0]
                 }
@@ -42,8 +38,8 @@
             }
             else if(x<1000000000){
                 var thousandsPlace = Math.floor(x/1000);
-                var remainder = x-thousandsPlace
-                if (x % 1000){
+                var remainder = x-thousandsPlace*1000;
+                if (x % 1000 == 0){
                     return numberToWords(thousandsPlace)+ex[1];
                 }
                 else{
@@ -52,6 +48,4 @@
             }
             
         }   
-    </script>
-    </body>
-</html>
+   
