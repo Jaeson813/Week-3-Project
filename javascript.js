@@ -14,7 +14,7 @@ var further = ["hundred", "thousand"];
 // Function that converts numbers into words
 function numberToWords(x){
     if (x<20) {
-        return digitsTeen[x];
+        return firstTwenty[x];
     }
     else if (x<100) {
         var tensPlace = Math.floor(x/10);
@@ -23,17 +23,17 @@ function numberToWords(x){
             return tens[tensPlace-2]
         }
         else {
-            return tens[tensPlace-2]+"-"+digitsTeen[onesPlace];
+            return tens[tensPlace-2]+"-"+firstTwenty[onesPlace];
         }
     }
     else if (x<1000) {
         var hundredsPlace = Math.floor(x/100);
         var remainder = x-hundredsPlace*100;
         if (x % 100 == 0) {
-            return digitsTeen[hundredsPlace]+ex[0]
+            return firstTwenty[hundredsPlace]+ex[0]
         }
         else {
-            return digitsTeen[hundredsPlace]+ex[0]+numberToWords(remainder)
+            return firstTwenty[hundredsPlace]+ex[0]+numberToWords(remainder)
         }
     }
     else if(x<1000000000) {
