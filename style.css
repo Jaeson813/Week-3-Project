@@ -115,7 +115,6 @@ body {
     font-family: "Jost";
     font-weight: normal;
     font-size: 20px;
-    background: rgba(93, 121, 216, 0.473);
 }
 
 h1 {
@@ -159,7 +158,4 @@ input {
     font-weight: bold;
     font-family: "Jost";
     font-size: 60px;
-    border: outset;
-    border-width: 10px;
-    background: rgb(255, 255, 255);
 }
