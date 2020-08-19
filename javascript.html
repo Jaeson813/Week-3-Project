@@ -6,14 +6,36 @@
     <body>
         <script>
         // Arrays for the function to pull from
-        var digits = ["zero", "one","two","three","four","five","six","seven","eight","nine"];
-        var teen = ["ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+        var digitsTeen = ["zero", "one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
         var tens = ["twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
         var ex = ["hundred","thousand"];
+        var x=8;
         // Function that converts numbers into words
         function numberToWords(x){
-            x = x.toString();
-        }
+            if (x<20){
+                return digitsTeen[x];
+            }
+            else if (x<100){
+                var tensPlace = Math.floor(x/10);
+                var onesPlace = x-tensPlace*10;
+                if (x % 10 == 0){
+                    return tens[tensPlace-2]
+                }
+                else{
+                    return tens[tensPlace-2]+"-"+digitsTeen[onesPlace];
+                }
+            }
+            else if(x<1000){
+                var hundredsPlace = Math.floor(x/100);
+                var remainder = x-hundredsPlace;
+                if (x % 100 == 0){
+                    return hundredsPlace+ex[1]
+                }
+                else{
+                    return hundredsPlace+ex[1]+remainder;
+                }
+            }
+        }   
     </script>
     </body>
 </html>
