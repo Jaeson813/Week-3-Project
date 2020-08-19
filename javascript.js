@@ -30,20 +30,20 @@ function numberToWords(x){
         var hundredsPlace = Math.floor(x/100);
         var remainder = x-hundredsPlace*100;
         if (x % 100 == 0) {
-            return firstTwenty[hundredsPlace]+ex[0]
+            return firstTwenty[hundredsPlace]+further[0]
         }
         else {
-            return firstTwenty[hundredsPlace]+ex[0]+numberToWords(remainder)
+            return firstTwenty[hundredsPlace]+further[0]+numberToWords(remainder)
         }
     }
     else if(x<1000000000) {
         var thousandsPlace = Math.floor(x/1000);
         var remainder = x-thousandsPlace*1000;
         if (x % 1000 == 0) {
-            return numberToWords(thousandsPlace)+ex[1];
+            return numberToWords(thousandsPlace)+further[1];
         }
         else {
-            return numberToWords(thousandsPlace)+ex[1]+numberToWords(remainder);
+            return numberToWords(thousandsPlace)+further[1]+numberToWords(remainder);
         }
     }
 }
