@@ -138,7 +138,10 @@ p {
     text-align: center;
     font-weight: bold;
     font-family: "Jost";
-    font-size: 84px;
+
+    font-size: 72px;
+    border: inset;
+    border-width: 10px;    
 }
 
 .btn {
