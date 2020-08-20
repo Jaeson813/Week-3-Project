@@ -1,10 +1,14 @@
-
-        // Making the main function run when the convert button is pressed
+        // Allowing the result to be spoken
+        var synth = window.speechSynthesis;
+        // Making the main function run when the convert button is pressed, and 
         window.addEventListener("load", function(){
             var button = document.getElementById("calc");
             button.addEventListener("click", function(){
                 var x = document.getElementById("lit-amount-input").value;
-                document.getElementById("lit-amount-output").textContent=numberToWords(x);
+                var textToReadAloud = numberToWords(x);
+                document.getElementById("lit-amount-output").textContent = textToReadAloud.toUpperCase();
+                var utterThis = new SpeechSynthesisUtterance(textToReadAloud);
+                synth.speak(utterThis);
             },false);
         },false);
         
@@ -21,7 +25,7 @@
                 var tensPlace = Math.floor(x/10);
                 var onesPlace = x-tensPlace*10;
                 if (x % 10 == 0){
-                    return tens[tensPlace-2]
+                    return tens[tensPlace-2];
                 }
                 else{
                     return tens[tensPlace-2]+"-"+digitsTeen[onesPlace];
@@ -31,10 +35,10 @@
                 var hundredsPlace = Math.floor(x/100);
                 var remainder = x-hundredsPlace*100;
                 if (x % 100 == 0){
-                    return digitsTeen[hundredsPlace]+ex[0]
+                    return digitsTeen[hundredsPlace]+ex[0];
                 }
                 else{
-                    return digitsTeen[hundredsPlace]+ex[0]+numberToWords(remainder)
+                    return digitsTeen[hundredsPlace]+ex[0]+numberToWords(remainder);
                 }
             }
             else if(x<1000000000){
