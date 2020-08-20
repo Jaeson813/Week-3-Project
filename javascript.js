@@ -1,3 +1,4 @@
+
         // Allowing the result to be spoken
         var synth = window.speechSynthesis;
         // Making the main function run when the convert button is pressed, and 
