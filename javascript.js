@@ -1,4 +1,4 @@
-
+        // Making the main function run when the convert button is pressed
         window.addEventListener("load", function(){
             var button = document.getElementById("calc");
             button.addEventListener("click", function(){
